@@ -7,13 +7,13 @@ echo "Unzipping..." &&
 unzip SendBirdSDK.xcframework.zip &&
 echo "Unpacking..." &&
 #We need to search for the SDK since, for whatever reason, some builds have a zip file that has the entire developer's folder structure in them
-sdk_root_folder=$(find . -type d -name 'SendBirdSDK.xcframework' -print -quit)
-if [ -z "$sdk_root_folder" ]; then
-    echo "Could not find SendBirdSDK.xcframework";
-    exit 1
-fi
-
-mv "$sdk_root_folder" SendBirdSDK.xcframework &&
+#sdk_root_folder=$(find . -type d -name 'SendBirdSDK.xcframework' -print -quit)
+#if [ -z "$sdk_root_folder" ]; then
+#    echo "Could not find SendBirdSDK.xcframework";
+#    exit 1
+#fi
+#
+#mv "$sdk_root_folder" SendBirdSDK.xcframework &&
 echo "Cleaning before packaging..." &&
 rm -rf SendBirdSDK.xcframework.zip &&
 echo "Generating binary resource package..." &&
